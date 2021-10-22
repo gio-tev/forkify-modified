@@ -1,0 +1,176 @@
+.preview {
+  &__link {
+    &:link,
+    &:visited {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 1.5rem 3.25rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.3s ease-in;
+    }
+    &-dark {
+      &:link,
+      &:visited {
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding: 1.5rem 3.25rem;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease-in;
+      }
+
+      &:hover {
+        background-color: $color-green;
+        transform: scale(0.95);
+        transition: all 0.3s ease-in;
+      }
+
+      &:hover h4 {
+        color: $color-grad-1;
+        transition: all 0.3s ease-in;
+      }
+
+      &:hover p {
+        color: $color-black-dark-4;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+    &:hover {
+      background-color: $color-grey-light-2;
+      transform: scale(0.95);
+      transition: all 0.3s ease-in;
+    }
+
+    &--active {
+      background-color: $color-grey-light-2;
+      transition: all 0.3s ease-in;
+
+      &-dark {
+        background-color: $color-green;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  &__fig {
+    flex: 0 0 5.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    height: 5.8rem;
+    margin-right: 2rem;
+    position: relative;
+    backface-visibility: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.4;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-columns: 1fr 2rem;
+    row-gap: 0.1rem;
+    align-items: center;
+    width: 100%;
+    letter-spacing: 0;
+  }
+
+  &__title {
+    font-family: 'Sriracha', cursive;
+    grid-column: 1/-1;
+    font-size: 1.5rem;
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    // This is how text is truncated!
+    text-overflow: ellipsis;
+    max-width: 25rem;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &-dark {
+      font-family: 'Sriracha', cursive;
+      grid-column: 1/-1;
+      font-size: 1.5rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      font-weight: 500;
+      text-overflow: ellipsis;
+      max-width: 25rem;
+      white-space: nowrap;
+      overflow: hidden;
+
+      &-active {
+        color: $color-grad-1;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  &__publisher {
+    font-family: 'Sriracha', cursive;
+    font-size: 1.2rem;
+    color: $color-grey-dark-2;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      font-family: 'Sriracha', cursive;
+      font-size: 1.2rem;
+      color: $color-grey-4;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: all 0.3s ease-in;
+
+      &-active {
+        color: $color-black-dark-4;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+
+  &__user-generated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darken($color-grey-light-2, 10%);
+    height: 2rem;
+    width: 2rem;
+    margin-left: auto;
+    margin-right: 1.75rem;
+    border-radius: 10rem;
+
+    svg {
+      height: 1.2rem;
+      width: 1.2rem;
+      fill: $color-primary;
+    }
+  }
+}
+
+.bookmarks-container {
+  position: absolute;
+  right: 0rem;
+  bottom: 1.3rem;
+}

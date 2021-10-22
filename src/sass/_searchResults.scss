@@ -1,0 +1,118 @@
+.search-results {
+  grid-area: list;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-white;
+  padding: 3rem 0;
+  transition: all 0.3s ease-in;
+
+  &-dark {
+    background-color: $color-black-dark-3;
+  }
+}
+
+.results {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  position: relative;
+  margin-top: auto;
+  padding: 0 2.5rem;
+  height: 5rem;
+  bottom: 0.5rem;
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  &__btn {
+    &--prev {
+      float: left;
+      transition: all 0.3s;
+
+      &-dark {
+        float: left;
+        color: $color-primary;
+        background-color: $color-black-dark-1;
+        transition: all 0.3s;
+      }
+    }
+
+    &--mid {
+      font-size: 1.8rem;
+      font-weight: 500;
+      color: $color-primary;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      padding: 0.3rem 1.2rem;
+      width: 4rem;
+      text-align: center;
+      transition: all 0.3s;
+
+      &-dark {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: rgb(181, 196, 199);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        padding: 0.3rem 1.2rem;
+        width: 4rem;
+        text-align: center;
+        transition: all 0.3s;
+      }
+    }
+
+    &--next {
+      float: right;
+      transition: all 0.3s;
+
+      &-dark {
+        float: right;
+        color: $color-primary;
+        background-color: $color-black-dark-1;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+.copyright {
+  transform: translateX(35rem);
+  color: $color-grey-dark-2;
+  font-size: 1.4rem;
+  padding: 0 3.5rem;
+  margin-top: 4rem;
+  text-align: center;
+
+  .twitter-link:link,
+  .twitter-link:visited {
+    color: $color-grey-dark-2;
+  }
+
+  .twitter-link-dark,
+  .twitter-link-dark:link,
+  .twitter-link-dark:visited {
+    color: rgb(181, 196, 199);
+  }
+
+  &-dark {
+    transform: translateX(35rem);
+    color: $color-grey-light-3;
+    font-size: 1.4rem;
+    padding: 0 3.5rem;
+    margin-top: 4rem;
+    text-align: center;
+
+    .twitter-link-dark,
+    .twitter-link-dark:link,
+    .twitter-link-dark:visited {
+      color: $color-grey-light-3;
+    }
+  }
+}

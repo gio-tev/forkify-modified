@@ -1,0 +1,91 @@
+$color-primary: #3c9ddd;
+$color-white: rgb(255, 255, 255);
+$color-green: rgb(129, 209, 121);
+
+$color-grad-1: #ee5959;
+// $color-grad-2: #f54e4e;
+$color-grad-3: #b4c5a7;
+$color-grad-4: #bfdfb2;
+
+$color-grey-light-1: #eeeeee;
+$color-grey-light-2: #e4e4e4;
+$color-grey-light-3: #d1d1d1;
+$color-grey-light-4: rgb(206, 211, 211);
+
+$color-grey: rgb(128, 128, 128);
+$color-grey-1: rgb(240, 240, 240);
+$color-grey-2: rgb(133, 152, 182);
+$color-grey-3: rgb(136, 136, 150);
+$color-grey-4: rgb(183, 190, 201);
+
+$color-grey-dark-1: #615551;
+$color-grey-dark-2: #575757;
+$color-grey-dark-3: #333131;
+
+$color-black-dark: rgb(0, 0, 0);
+$color-black-dark-1: rgb(14, 16, 17);
+$color-black-dark-2: rgb(29, 30, 32);
+$color-black-dark-3: rgb(37, 40, 44);
+$color-black-dark-4: rgb(36, 37, 37);
+
+$bp-large: 78.15em; // 1250px
+$bp-nav: 75em; // 1200px
+$bp-medium-1: 73.5em; // 1180px
+$bp-medium-2: 68.75em; // 1100px
+$bp-medium-3: 62.5em; // 1000px
+$bp-small: 56.25em; // 900px
+$bp-small-2: 50em; // 800px
+$bp-small-3: 46.875em; // 750px
+$bp-small-4: 43.75em; // 700px
+$bp-small-5: 40.625em; // 650px
+$bp-small-6: 37.5em; // 600px
+$bp-small-7: 34.375em; // 550px
+$bp-small-8: 28.125em; // 450px
+$bp-small-9: 23.4375em; // 375px
+$bp-small-10: 20.625em; // 330px
+$bp-small-11: 18.75em; // 300px
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Sriracha', cursive;
+  font-weight: 500;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px
+}
+
+body {
+  line-height: 1.6;
+  background-color: $color-green;
+  color: $color-grey-dark-3;
+  min-height: calc(100vh - 2 * 4vw);
+  transition: all 0.3s ease-in;
+}
+
+body.dark {
+  background-color: $color-black-dark;
+}
+
+.container {
+  max-width: 120rem;
+  min-height: 117rem;
+  margin: 4vw auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 20rem minmax(32rem, auto);
+  grid-template-columns: 0.825fr 2.175fr;
+  grid-template-areas:
+    'head head '
+    'list recipe'
+    'list recipe2';
+}

@@ -1,0 +1,247 @@
+.header {
+  grid-area: head;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  transition: all 0.3s ease-in;
+  background-color: $color-grey-1;
+
+  &-dark {
+    background-color: $color-black-dark-2;
+  }
+
+  &__logo--container {
+    margin-left: 8%;
+    width: 15rem;
+    height: 100%;
+  }
+
+  &__logo {
+    height: 6rem;
+    display: block;
+    font-size: 3.5rem;
+    color: $color-primary;
+    font-weight: 500;
+  }
+}
+
+.logo-refresh {
+  margin-top: 25%;
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 26.5%;
+  border-radius: 10rem;
+  padding-left: 3rem;
+  margin-left: 3.5rem;
+  height: 4.5rem;
+  background-color: $color-white;
+  transition: all 0.3s ease-in;
+  box-shadow: inset 0.1px 0.1px 35px 2px $color-grey-light-4;
+
+  &__dark {
+    background-color: $color-grey-dark-3;
+    box-shadow: inset 0.1px 0.1px 80px $color-grey-2;
+    transition: all 0.3s ease-in;
+    color: white;
+  }
+
+  &:focus-within {
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+  }
+
+  &__field {
+    border: none;
+    background: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.7rem;
+    width: 30rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: $color-grey-4;
+      font-weight: 100;
+      transition: all 0.3s ease-in;
+    }
+
+    &-dark::placeholder {
+      color: $color-grey-light-3;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-family: inherit;
+    height: 4.5rem;
+  }
+}
+
+.nav {
+  height: 50%;
+  align-self: flex-end;
+  display: flex;
+  z-index: 4;
+
+  &__list {
+    display: flex;
+    position: absolute;
+    list-style: none;
+    right: 1.5rem;
+    bottom: 3rem;
+    z-index: 2;
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__btn {
+    height: 100%;
+    font-family: inherit;
+    font-size: 1.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 1.5rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: $color-grey-dark-3;
+    svg {
+      height: 2.4rem;
+      width: 2.4rem;
+      fill: $color-primary;
+      margin-right: 0.7rem;
+      transform: translateY(-1px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__btn-dark {
+    color: $color-grey-2;
+  }
+
+  &__btn-dark-mode {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 8rem;
+    height: 3rem;
+    background-color: $color-black-dark;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      background-color: $color-white;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__btn-toggle-mode {
+    position: absolute;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin-left: 0.4rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &-dark {
+      width: 2.5rem;
+      height: 2.5rem;
+      background-color: $color-black-dark;
+      transition: all 0.3s ease;
+      transform: translateX(190%);
+    }
+  }
+
+  &__btn-text-light {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: 0.3px;
+    width: 4rem;
+    text-align: center;
+    transition: color 0.3s ease-in;
+    margin-left: 0.9rem;
+    visibility: hidden;
+
+    &-dark {
+      color: $color-black-dark;
+      transition: color 0.3s ease-in;
+      visibility: visible;
+    }
+  }
+
+  &__btn-text-dark {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 0.9;
+    letter-spacing: 0.3px;
+    color: $color-white;
+    width: 4rem;
+    text-align: center;
+    transition: color 0.3s ease-in;
+    margin-left: -1.8rem;
+    visibility: visible;
+
+    &-dark {
+      color: $color-black-dark;
+      transition: color 0.3s ease-in;
+      visibility: hidden;
+    }
+  }
+}
+
+.bookmarks {
+  position: absolute;
+  right: -1.5rem;
+  top: 5.8rem;
+  padding: 3rem 0;
+  background-color: $color-white;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+
+  &-dark {
+    top: 5.8rem;
+    background-color: $color-black-dark-3;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  .nav__btn--bookmarks:focus + & {
+    visibility: visible;
+    opacity: 1;
+  }
+}

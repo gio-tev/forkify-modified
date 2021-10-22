@@ -1,0 +1,307 @@
+.recipe {
+  grid-area: recipe;
+  position: relative;
+  background-color: $color-grey-1;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in;
+
+  &-paragraph-dark {
+    color: $color-grey-light-3;
+    transition: all 0.3s ease-in;
+  }
+
+  &-dark {
+    background-color: $color-black-dark-2;
+    transition: all 0.3s ease-in;
+  }
+
+  &__fig-details-container {
+    display: flex;
+    width: 100%;
+  }
+
+  &__fig {
+    height: 32rem;
+    position: relative;
+    transform-origin: top;
+    width: 62.5%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      width: 100%;
+      display: block;
+      height: 100%;
+      top: 0;
+      background-image: linear-gradient($color-grad-3, $color-grad-4);
+      opacity: 0.2;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+    width: 60%;
+    line-height: 1.95;
+    text-align: center;
+    z-index: 3;
+
+    span {
+      border-radius: 10px;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+      padding: 1rem 2rem;
+      background-color: $color-grad-1;
+    }
+  }
+
+  &__details {
+    position: relative;
+    text-align: center;
+    width: 37.5%;
+    background-color: $color-grey-1;
+    transition: all 0.3s ease-in;
+
+    & > :first-child {
+      position: absolute;
+      top: 4.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    & > :nth-child(2) {
+      position: absolute;
+      bottom: 13rem;
+      left: 48%;
+      transform: translateX(-50%);
+    }
+
+    &-dark {
+      position: relative;
+      text-align: center;
+      width: 37.5%;
+      background-color: $color-black-dark-2;
+      transition: all 0.3s ease-in;
+
+      & > :first-child {
+        position: absolute;
+        top: 4.8rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      & > :nth-child(2) {
+        position: absolute;
+        bottom: 13rem;
+        left: 48%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__info {
+    font-size: 1.65rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-icon {
+    height: 2.35rem;
+    width: 2.35rem;
+    fill: $color-primary;
+    margin-right: 1.15rem;
+  }
+
+  &__info-data {
+    margin-right: 0.5rem;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      color: $color-grey-2;
+      margin-right: 0.5rem;
+      font-weight: 500;
+      font-size: 2rem;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__info-text {
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      color: $color-grey-2;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__info-buttons {
+    display: flex;
+    margin-left: 1.6rem;
+    transform: translateY(-1px);
+  }
+
+  &__user-generated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: darken($color-grey-light-2, 10%);
+    height: 4.5em;
+    width: 4.5rem;
+    border-radius: 10rem;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1rem;
+    z-index: 4;
+
+    svg {
+      height: 2.25rem;
+      width: 2.25rem;
+      fill: $color-primary;
+    }
+  }
+
+  &__ingredients {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 11rem 8rem 8rem 8rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    transition: all 0.3s ease-in;
+    background-color: $color-grey-1;
+    border-top: 1px solid $color-grey-light-3;
+    border-bottom: 1px solid $color-grey-light-3;
+
+    &-dark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      padding: 11rem 8rem 8rem 8rem;
+      font-size: 1.6rem;
+      line-height: 1.4;
+      background-color: $color-black-dark-2;
+      border-top: 1px solid $color-black-dark-3;
+      border-bottom: 1px solid $color-black-dark-3;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__ingredient-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3rem;
+    list-style: none;
+    justify-items: center;
+  }
+
+  &__ingredient {
+    display: flex;
+  }
+
+  &__icon {
+    height: 2rem;
+    width: 2rem;
+    fill: $color-primary;
+    margin-right: 1.1rem;
+    flex: 0 0 auto;
+    margin-top: 0.1rem;
+  }
+
+  &__quantity {
+    margin-right: 0.5rem;
+    flex: 0 0 auto;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      margin-right: 0.5rem;
+      flex: 0 0 auto;
+
+      color: $color-grey-2;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__description {
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      color: $color-grey-2;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__directions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 10rem;
+    background-color: $color-grey-1;
+    height: 100%;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 5rem 10rem;
+      background-color: $color-black-dark-2;
+      height: 100%;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__directions-text {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: $color-grey-dark-3;
+    font-weight: 100;
+    transition: all 0.3s ease-in;
+
+    &-dark {
+      font-size: 1.8rem;
+      text-align: center;
+      margin-bottom: 3.5rem;
+      color: $color-grey-2;
+      font-weight: 100;
+      transition: all 0.3s ease-in;
+    }
+  }
+
+  &__publisher {
+    font-weight: 700;
+  }
+}
+
+.recipe-ingredients-and-directions {
+  background-color: $color-grey-1;
+  transition: all 0.3s ease-in;
+
+  &-dark {
+    background-color: $color-black-dark-2;
+    transition: all 0.3s ease-in;
+  }
+}

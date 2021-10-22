@@ -1,0 +1,21 @@
+{
+  "name": "forkify-v2",
+  "version": "2.0.0",
+  "description": "recipe-app",
+  "default": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build --no-minify index.html --out-dir ./dist"
+  },
+  "author": "gio-tev",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.38.1"
+  },
+  "dependencies": {
+    "core-js": "^3.16.3",
+    "fractional": "^1.0.0",
+    "regenerator-runtime": "^0.13.9"
+  }
+}
