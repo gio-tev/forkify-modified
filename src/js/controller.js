@@ -12,11 +12,6 @@ import 'regenerator-runtime/runtime'; // polyfilling ES6 async-await
 import 'core-js/stable'; // polyfilling all the other ES6 syntax
 import { async } from 'regenerator-runtime';
 
-// Parcel's Hot Module Replacement
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlSearchResults = async function () {
   try {
     // 1 Get search query
