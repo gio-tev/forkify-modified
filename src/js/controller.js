@@ -163,5 +163,6 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   darkModeView.toggleModes(controlUpdateModesBtnClick);
+  console.log('test');
 };
 init();
