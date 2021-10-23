@@ -1,5 +1,5 @@
 import View from './view.js';
-import { Fraction } from 'fractional'; // turning decimal numbers to fractionals
+// import { Fraction } from 'fractional'; // turning decimal numbers to fractionals
 import icons from '../../img/icons.svg';
 
 class RecipeIngredientsAndDirectionsView extends View {
