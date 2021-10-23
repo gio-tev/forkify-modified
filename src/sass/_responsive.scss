@@ -543,7 +543,11 @@
 // 550px
 @media only screen and(max-width:$bp-small-7) {
   .container {
-    grid-template-rows: 25rem minmax(32rem, auto);
+    grid-template-rows: 25rem min-content;
+  }
+
+  .message {
+    padding: 3rem 4rem 4rem 4rem;
   }
 
   .header__logo--container {
