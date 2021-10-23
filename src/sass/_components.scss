@@ -87,6 +87,7 @@
 
   &:focus {
     outline: none;
+    transform: scale(1.05);
   }
 
   &-dark {
