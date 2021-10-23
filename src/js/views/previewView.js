@@ -28,6 +28,8 @@ class PreviewView extends View {
                   } ${
       this._data.id === id && this._body.classList.contains('dark')
         ? 'preview__title-dark-active'
+        : '' || (this._data.id === id && !this._body.classList.contains('dark'))
+        ? 'preview__title-active'
         : ''
     }">${this._data.title} ...</h4>
                   <p class="preview__publisher${
@@ -35,6 +37,8 @@ class PreviewView extends View {
                   } ${
       this._data.id === id && this._body.classList.contains('dark')
         ? 'preview__publisher-dark-active'
+        : '' || (this._data.id === id && !this._body.classList.contains('dark'))
+        ? 'preview__publisher-active'
         : ''
     }">${this._data.publisher}</p>         
          </div>
