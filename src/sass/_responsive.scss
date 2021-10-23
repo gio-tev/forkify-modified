@@ -543,11 +543,11 @@
 // 550px
 @media only screen and(max-width:$bp-small-7) {
   .container {
-    grid-template-rows: 25rem min-content;
+    grid-template-rows: 25rem minmax(25rem, min-content);
   }
 
   .message {
-    padding: 3rem 4rem 4rem 4rem;
+    padding: 5rem 5rem;
   }
 
   .header__logo--container {
@@ -689,7 +689,6 @@
 // 450px
 @media only screen and(max-width:$bp-small-8) {
   .nav__btn-dark-mode {
-    -webkit-tap-highlight-color: transparent;
     width: 8rem;
     height: 3rem;
   }
