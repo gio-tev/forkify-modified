@@ -552,7 +552,14 @@
 
   .error {
     padding: 0rem 5rem;
-    margin-top: -6rem;
+    margin-top: -2.5rem;
+  }
+
+  .results {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .header__logo--container {
