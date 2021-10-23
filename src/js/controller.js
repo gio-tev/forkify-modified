@@ -8,9 +8,9 @@ import bookamrksView from './views/bookamrksView.js';
 import addRecipeView from './views/addRecipeView.js';
 import darkModeView from './views/darkModeView.js';
 
-// import 'regenerator-runtime/runtime'; // polyfilling ES6 async-await
-// import 'core-js/stable'; // polyfilling all the other ES6 syntax
-// import { async } from 'regenerator-runtime';
+import 'regenerator-runtime/runtime'; // polyfilling ES6 async-await
+import 'core-js/stable'; // polyfilling all the other ES6 syntax
+import { async } from 'regenerator-runtime';
 
 const controlSearchResults = async function () {
   try {
