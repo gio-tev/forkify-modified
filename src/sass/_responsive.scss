@@ -932,7 +932,7 @@
   }
 
   .bookmarks {
-    right: -1rem;
+    right: 0.5rem;
     top: 3rem;
   }
 
@@ -952,8 +952,18 @@
   }
 }
 
-// 330px
+// 360px
 @media only screen and(max-width:$bp-small-10) {
+  .bookmarks {
+    right: 0rem;
+    top: 3rem;
+  }
+  .nav__list {
+    left: -18%;
+  }
+}
+// 330px
+@media only screen and(max-width:$bp-small-11) {
   .bookmarks {
     right: -0.5rem;
     top: 3rem;
@@ -996,7 +1006,7 @@
 }
 
 // 300px
-@media only screen and(max-width:$bp-small-11) {
+@media only screen and(max-width:$bp-small-12) {
   .bookmarks {
     right: -0.6rem;
   }
