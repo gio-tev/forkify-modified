@@ -240,8 +240,8 @@
     list-style: none;
   }
 
-  // .nav__btn--bookmarks:focus + & {
-  //   visibility: visible;
-  //   opacity: 1;
-  // }
+  .nav__btn--bookmarks:focus + & {
+    visibility: visible;
+    opacity: 1;
+  }
 }
