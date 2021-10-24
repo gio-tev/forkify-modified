@@ -48,14 +48,14 @@
 
   &__dark {
     background-color: $color-grey-dark-3;
-    box-shadow: inset 0.1px 0.1px 80px $color-grey-2;
+    box-shadow: inset 0.1px 0.1px 80px $color-grey-3;
     transition: all 0.3s ease-in;
-    color: $color-white;
+    color: $color-black-dark;
   }
 
   &:focus-within {
     transform: translateY(-2px);
-    box-shadow: 0 0.7rem 3rem rgba($color-grey-dark-1, 0.08);
+    box-shadow: inset 1rem 0.7rem 5rem $color-white;
   }
 
   &__field {
@@ -240,8 +240,8 @@
     list-style: none;
   }
 
-  .nav__btn--bookmarks:focus + & {
-    visibility: visible;
-    opacity: 1;
-  }
+  // .nav__btn--bookmarks:focus + & {
+  //   visibility: visible;
+  //   opacity: 1;
+  // }
 }
