@@ -555,6 +555,23 @@
     margin-top: -2.5rem;
   }
 
+  .bookmarks .error {
+    padding: 0rem 1rem;
+    margin-top: 0rem;
+  }
+
+  .bookmarks {
+    padding: 1rem;
+    right: 45%;
+    top: 3rem;
+    border-radius: 10px;
+    background-color: $color-grey-light-4;
+
+    &-dark {
+      background-color: $color-black-dark-5;
+    }
+  }
+
   .results {
     margin-top: 1rem;
     display: flex;
@@ -665,18 +682,6 @@
     bottom: 0rem;
     width: 100%;
     left: -21%;
-  }
-
-  .bookmarks {
-    padding: 1rem;
-    right: 45%;
-    top: 3rem;
-    border-radius: 10px;
-    background-color: $color-grey-light-4;
-
-    &-dark {
-      background-color: $color-black-dark-5;
-    }
   }
 
   .preview {

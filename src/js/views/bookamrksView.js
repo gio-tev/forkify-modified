@@ -7,25 +7,11 @@ class BookmarksView extends View {
   _successMessage;
 
   _searchResultsWidth = document.querySelector('.search-results');
-
-  _navBtnBookmarks = document.querySelector('.nav__btn--bookmarks');
   _bookmarks = document.querySelector('.bookmarks');
 
   constructor() {
     super();
     this._resizeEvents();
-    this._focusOnbookark();
-  }
-
-  _focusOnbookark() {
-    this._navBtnBookmarks.addEventListener('focus', () => {
-      this._bookmarks.style.opacity = '1';
-      this._bookmarks.style.visibility = 'visible';
-    });
-    this._navBtnBookmarks.addEventListener('focusout', () => {
-      this._bookmarks.style.opacity = '0';
-      this._bookmarks.style.visibility = 'hidden';
-    });
   }
 
   addHandlerRender(subsHandler) {
