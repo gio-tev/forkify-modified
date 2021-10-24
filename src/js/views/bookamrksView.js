@@ -18,7 +18,7 @@ class BookmarksView extends View {
   }
 
   _focusOnbookark() {
-    this._navBtnBookmarks.addEventListener('click', () => {
+    this._navBtnBookmarks.addEventListener('focus', () => {
       this._bookmarks.style.opacity = '1';
       this._bookmarks.style.visibility = 'visible';
     });
