@@ -543,12 +543,12 @@
 // 550px
 @media only screen and(max-width:$bp-small-7) {
   .container {
-    grid-template-rows: 25rem minmax(0rem, min-content);
+    grid-template-rows: 25rem min-content;
+    min-height: 100vh;
   }
 
   .message {
     padding: 2.5rem 5rem 2rem 5rem;
-    // border: 1px solid red;
   }
 
   .error {
