@@ -48,7 +48,7 @@
 
   &__dark {
     background-color: $color-grey-dark-3;
-    box-shadow: inset 0.1px 0.1px 80px $color-grey-3;
+    box-shadow: inset 0.1px 0.1px 10px $color-grey-3;
     transition: all 0.3s ease-in;
     color: $color-black-dark;
   }
