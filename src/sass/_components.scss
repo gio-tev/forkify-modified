@@ -229,6 +229,10 @@
     font-weight: 500;
     transition: all 0.3s ease-in;
   }
+
+  & div {
+    align-self: center;
+  }
 }
 
 .error {
@@ -237,7 +241,7 @@
   margin: 0 auto;
   padding: 5rem 4rem;
   transition: all 0.3s ease-in;
-
+  align-items: center;
   svg {
     height: 3rem;
     width: 3rem;
