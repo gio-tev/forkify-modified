@@ -12,6 +12,11 @@ import 'regenerator-runtime/runtime'; // polyfilling ES6 async-await
 import 'core-js/stable'; // polyfilling all the other ES6 syntax
 import { async } from 'regenerator-runtime';
 
+const retainModeState = function () {
+  darkModeView.retainModeStateOnRefresh();
+};
+retainModeState();
+
 const controlSearchResults = async function () {
   try {
     // 1 Get search query
