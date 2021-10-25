@@ -30,7 +30,7 @@ class DarkModeView extends View {
 
   constructor() {
     super();
-    // this._retainModeStateOnRefresh();
+    this._retainModeStateOnRefresh();
     this._addRecipeDarkMode();
   }
 
@@ -80,7 +80,7 @@ class DarkModeView extends View {
     });
   }
 
-  retainModeStateOnRefresh() {
+  _retainModeStateOnRefresh() {
     if (sessionStorage.getItem('mode') === 'dark') {
       this._body.classList.add('dark');
       this._btnModesContainer.classList.add('nav__btn-dark-mode-dark');
