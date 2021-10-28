@@ -19,6 +19,42 @@
     right: -1.5rem;
     top: 5.9rem;
   }
+
+  .preview {
+    &__link {
+      &:hover {
+        background-color: $color-grey-light-2;
+      }
+
+      &:hover h4 {
+        color: $color-primary;
+        transition: all 0.3s ease-in;
+      }
+
+      &:hover p {
+        color: $color-grey-dark-2;
+        transition: all 0.3s ease-in;
+      }
+
+      &--active {
+        background-color: $color-grey-light-2;
+      }
+    }
+
+    &__title {
+      &-active {
+        color: $color-primary;
+        transition: all 0.3s ease-in;
+      }
+    }
+
+    &__publisher {
+      &-active {
+        color: $color-grey-dark-2;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
 }
 
 // 1180px
@@ -435,6 +471,11 @@
   .bookmarks {
     right: -4rem;
     top: 10rem;
+    background-color: $color-grey-light-4;
+
+    &-dark {
+      background-color: $color-black-dark-5;
+    }
   }
 }
 
@@ -566,11 +607,6 @@
     right: 45%;
     top: 3rem;
     border-radius: 10px;
-    background-color: $color-grey-light-4;
-
-    &-dark {
-      background-color: $color-black-dark-5;
-    }
   }
 
   .results {
@@ -691,42 +727,6 @@
     bottom: 0rem;
     width: 100%;
     left: -21%;
-  }
-
-  .preview {
-    &__link {
-      &:hover {
-        background-color: $color-green;
-      }
-
-      &:hover h4 {
-        color: $color-grad-1;
-        transition: all 0.3s ease-in;
-      }
-
-      &:hover p {
-        color: $color-black-dark-4;
-        transition: all 0.3s ease-in;
-      }
-
-      &--active {
-        background-color: $color-green;
-      }
-    }
-
-    &__title {
-      &-active {
-        color: $color-grad-1;
-        transition: all 0.3s ease-in;
-      }
-    }
-
-    &__publisher {
-      &-active {
-        color: $color-black-dark-4;
-        transition: all 0.3s ease-in;
-      }
-    }
   }
 
   .nav {

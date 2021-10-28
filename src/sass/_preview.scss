@@ -9,7 +9,9 @@
       border-radius: 10px;
       text-decoration: none;
       transition: all 0.3s ease-in;
+      margin: 0 1rem;
     }
+
     &-dark {
       &:link,
       &:visited {
@@ -20,10 +22,11 @@
         border-radius: 10px;
         text-decoration: none;
         transition: all 0.3s ease-in;
+        margin: 0 1rem;
       }
 
       &:hover {
-        background-color: $color-green;
+        background-color: $color-black-dark-2;
         transform: scale(0.95);
         transition: all 0.3s ease-in;
       }
@@ -34,7 +37,7 @@
       }
 
       &:hover p {
-        color: $color-black-dark-4;
+        color: $color-grey-light-1;
         transition: all 0.3s ease-in;
       }
     }
@@ -50,7 +53,7 @@
       transition: all 0.3s ease-in;
 
       &-dark {
-        background-color: $color-green;
+        background-color: $color-black-dark-2;
         transition: all 0.3s ease-in;
       }
     }
@@ -107,6 +110,7 @@
     max-width: 25rem;
     white-space: nowrap;
     overflow: hidden;
+    transition: all 0.3s ease-in;
 
     &-dark {
       font-family: 'Sriracha', cursive;
@@ -119,6 +123,7 @@
       max-width: 25rem;
       white-space: nowrap;
       overflow: hidden;
+      transition: all 0.3s ease-in;
 
       &-active {
         color: $color-grad-1;
@@ -144,7 +149,7 @@
       transition: all 0.3s ease-in;
 
       &-active {
-        color: $color-black-dark-4;
+        color: $color-grey-light-1;
         transition: all 0.3s ease-in;
       }
     }
@@ -160,6 +165,7 @@
     margin-left: auto;
     margin-right: 1.75rem;
     border-radius: 10rem;
+    transition: all 0.3s ease-in;
 
     svg {
       height: 1.2rem;

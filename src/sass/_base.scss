@@ -1,9 +1,9 @@
 $color-primary: #3c9ddd;
 $color-white: rgb(255, 255, 255);
-$color-green: rgb(129, 209, 121);
+$color-grey-bg: rgb(165, 173, 165);
 
 $color-grad-1: #ee5959;
-$color-grad-2: #f54e4e;
+$color-grad-2: #da4343;
 $color-grad-3: #b4c5a7;
 $color-grad-4: #bfdfb2;
 
@@ -68,7 +68,7 @@ html {
 
 body {
   line-height: 1.6;
-  background-color: $color-green;
+  background-color: $color-grey-bg;
   color: $color-grey-dark-3;
   min-height: calc(100vh - 2 * 4vw);
   transition: all 0.3s ease-in;

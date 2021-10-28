@@ -222,6 +222,8 @@
 }
 
 .bookmarks {
+  display: flex;
+  justify-content: center;
   position: absolute;
   right: -1.5rem;
   top: 5.8rem;
