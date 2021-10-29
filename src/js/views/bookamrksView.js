@@ -24,7 +24,7 @@ class BookmarksView extends View {
         parseFloat(getComputedStyle(this._searchResultsWidth).width) - 5 + 'px';
     } else if (window.innerWidth < 750 && window.innerWidth > 550) {
       this._bookmarks.style.width = '28rem';
-    } else this._bookmarks.style.width = '30rem';
+    } else this._bookmarks.style.width = '32rem';
   }
 
   _resizeEvents() {
