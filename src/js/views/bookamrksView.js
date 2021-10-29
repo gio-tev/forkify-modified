@@ -9,8 +9,6 @@ class BookmarksView extends View {
   _searchResultsWidth = document.querySelector('.search-results');
   _bookmarks = document.querySelector('.bookmarks');
 
-  // test
-  // _recipeDetailsDark = document.querySelector('.recipe__details-dark');
   constructor() {
     super();
     this._resizeEvents();
@@ -21,12 +19,6 @@ class BookmarksView extends View {
   }
 
   _resizeBookmarkWidth() {
-    // const recipeDetailsDark = document.querySelector('.recipe__details-dark');
-    // const recipeDetails = document.querySelector('.recipe__details');
-    // console.log(recipeDetailsDark);
-    // console.log(this._recipeDetailsDark, 'test');
-
-    /////////////////////////////////////////////////////   test
     if (window.innerWidth > 750) {
       this._bookmarks.style.width =
         parseFloat(getComputedStyle(this._searchResultsWidth).width) - 5 + 'px';
@@ -38,7 +30,9 @@ class BookmarksView extends View {
   _resizeEvents() {
     ['load', 'resize'].forEach(ev =>
       window.addEventListener(ev, () => {
-        this._resizeBookmarkWidth();
+        setTimeout(() => {
+          this._resizeBookmarkWidth();
+        }, 1000);
       })
     );
   }
