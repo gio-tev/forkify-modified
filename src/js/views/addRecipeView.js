@@ -35,25 +35,9 @@ class AddRecipeView extends View {
     });
   }
 
-  _updateRecipeWindowOnClose() {
-    const parentClass = this;
-    parentClass.toggleWindow();
-
-    parentClass._clear();
-
-    parentClass._uploadColumns.forEach(column =>
-      parentClass._parentEl.insertAdjacentElement('beforeend', column)
-    );
-
-    parentClass._parentEl.insertAdjacentElement(
-      'beforeend',
-      parentClass._uploadBtn
-    );
-
-    parentClass._uploadInputs.forEach(input => (input.value = ''));
-  }
-
   _addHandlerHideWindow() {
+    const parentClass = this;
+
     this._btnClose.addEventListener(
       'click',
       this._updateRecipeWindowOnClose.bind(this)
@@ -63,6 +47,24 @@ class AddRecipeView extends View {
       'click',
       this._updateRecipeWindowOnClose.bind(this)
     );
+
+    document.addEventListener('keydown', function (e) {
+      console.log(e);
+      if (e.key === 'Escape') parentClass._updateRecipeWindowOnClose();
+    });
+  }
+
+  _updateRecipeWindowOnClose() {
+    this.toggleWindow();
+    this._clear();
+
+    this._uploadColumns.forEach(column =>
+      this._parentEl.insertAdjacentElement('beforeend', column)
+    );
+
+    this._parentEl.insertAdjacentElement('beforeend', this._uploadBtn);
+
+    this._uploadInputs.forEach(input => (input.value = ''));
   }
 
   addHandlerUpload(subsHandler) {
