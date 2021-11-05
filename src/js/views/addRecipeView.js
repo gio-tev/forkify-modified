@@ -27,17 +27,13 @@ class AddRecipeView extends View {
   }
 
   _addHandlerShowWindow() {
-    const parentClass = this;
-
-    this._btnOpen.addEventListener('click', function () {
-      parentClass.toggleWindow();
-      parentClass._firstInputFocus.focus();
+    this._btnOpen.addEventListener('click', () => {
+      this.toggleWindow();
+      this._firstInputFocus.focus();
     });
   }
 
   _addHandlerHideWindow() {
-    const parentClass = this;
-
     this._btnClose.addEventListener(
       'click',
       this._updateRecipeWindowOnClose.bind(this)
@@ -48,8 +44,8 @@ class AddRecipeView extends View {
       this._updateRecipeWindowOnClose.bind(this)
     );
 
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') parentClass._updateRecipeWindowOnClose();
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') this._updateRecipeWindowOnClose();
     });
   }
 
